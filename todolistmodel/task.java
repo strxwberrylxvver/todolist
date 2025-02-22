@@ -1,10 +1,10 @@
 package todolistmodel;
 
 public class task {
-    private String name;
+    private static String name;
     private boolean completion;
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -22,5 +22,7 @@ public class task {
     public task(){
         ;
     }
-
+    public task(String name){
+        this.name = name;
+    }
 }
