@@ -3,9 +3,9 @@ package todolistmodel;
 import java.util.ArrayList;
 
 public class taskgroup {
-    static ArrayList<task>tasks = new ArrayList<>();
+    private ArrayList<task>tasks = new ArrayList<>();
 
-    public static ArrayList<task> getTasks() {
+    public ArrayList<task> getTasks() {
         return tasks;
     }
 
@@ -14,6 +14,10 @@ public class taskgroup {
     }
 
     public taskgroup()
-    {}
+    {
+        tasks.add(new task("tester"));
+        tasks.add(new task("homework"));
+        tasks.add(new task("job"));
+    }
 
 }

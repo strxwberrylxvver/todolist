@@ -1,25 +1,32 @@
 package todolistview;
 
 import todolistmodel.task;
+import todolistmodel.taskgroup;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 public class mainpanel extends JPanel {
-    private ArrayList<task> tasks = new ArrayList<>();
+    private taskgroup tg = new taskgroup();
 
-    public mainpanel(){
+    public mainpanel() {
+        if (this != null) {
+            this.remove(this);
+            this.remove(this);
         this.setLayout(new GridLayout(0, 1));
 
-        tasks.add(new task("tester"));
-        tasks.add(new task("homework"));
-        tasks.add(new task("job"));
-
-        for (task task: tasks){
-            rowpanel r = new rowpanel();
+        for (task task : tg.getTasks()) {
+            imagepanel i = new imagepanel("filler text" +
+                    "fillerrrrr" +
+                    "fillerrrr");
+            this.add(i, BorderLayout.NORTH);
+            rowpanel r = new rowpanel(task);
             this.add(r, BorderLayout.SOUTH);
 
         }
+            this.revalidate();
+            this.repaint();
+    }
     }
 }
