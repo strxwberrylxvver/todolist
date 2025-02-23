@@ -13,11 +13,22 @@ public class taskgroup {
         this.tasks = tasks;
     }
 
+    public void addTask(task t){
+        tasks.add(t);
+    }
+
     public taskgroup()
     {
-        tasks.add(new task("tester"));
-        tasks.add(new task("homework"));
-        tasks.add(new task("job"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
+        tasks.add(new task("write your first task!"));
     }
 
 }

@@ -13,10 +13,11 @@ import java.awt.event.ItemEvent;
 public class rowpanel extends JPanel implements ActionListener {
     private task task = new task();
     private JCheckBox check;
-    private taskgroup tg = new taskgroup();
+    private taskgroup tg;
 
-    public rowpanel(task task){
+    public rowpanel(task task, taskgroup tg){
         this.check = new JCheckBox(task.getName());
+        this.task = task;
         this.tg = tg;
         JButton edit = new JButton("Edit");
 
@@ -49,7 +50,7 @@ public class rowpanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch(e.getActionCommand()){
             case "Edit":
-                String newName = JOptionPane.showInputDialog(this, "Edit task name:", check.getText());
+                String newName = JOptionPane.showInputDialog(this, "edit task name:", check.getText());
                 if (newName != null && !newName.trim().isEmpty()) {
                     task.setName(newName);
                     check.setText(newName);

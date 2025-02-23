@@ -20,7 +20,7 @@ public class task {
         this.completion = completion;
     }
     public task(){
-        ;
+
     }
     public task(String name){
         this.name = name;
